@@ -1,0 +1,16 @@
+<li class="cart__item cart">
+    <div class="cart__pizza">
+        <div class="cart__image"><img [src]="cartItem.img" width="80" alt=""></div>
+        <div class="cart__content">
+            <h3 class="cart__title">{{cartItem.title}}</h3>
+            <p class="cart__type">{{cartItem.type}}, {{cartItem.size}} см.</p>
+        </div>
+    </div>
+    <div class="cart__actions">
+        <button class="cart__decrement btn" (click)="decrement(cartItem.id)">-</button>
+        <span class="cart__count">{{cartItem.id}}</span>
+        <button class="cart__increment btn" (click)="increment(cartItem.id)">+</button>
+    </div>
+    <p class="cart__price">{{cartItem.price|currency:'₽'}}</p>
+    <div class="cart__delete btn" (click)="removeCartItem(cartItem.id)">x</div>
+</li>

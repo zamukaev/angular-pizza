@@ -1,0 +1,79 @@
+
+<div class="form-login" [formGroup]="myForm">
+        <h2>Reactive Forms</h2>
+        <label for="login">Login</label>
+        <input type="text" name="login" id="login" formControlName="login">
+         @if(!myForm.controls.login.valid && myForm.controls.login.touched){
+            <span [style]="{color:'red'}">this field is required</span>
+         }
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" formControlName="email">
+        @if(!myForm.controls.email.valid && myForm.controls.email.touched){
+            <span [style]="{color:'red'}">this field is required</span>
+         }
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" formControlName="password">
+        @if(!myForm.controls.password.valid && myForm.controls.password.touched){
+            <span [style]="{color:'red'}">this field is required</span>
+         }
+        <button (click)="handelValue()">send</button>
+</div>
+
+<div class="form-login" [formGroup]="validatorsForm">
+    <h2>Custom validators</h2>
+    <label for="mail">Login</label>
+    <input type="text" name="mail" id="mail" formControlName="mail">
+     @if(!validatorsForm.controls.mail.valid && validatorsForm.controls.mail.touched){
+        <span [style]="{color:'red'}">the data is incorrect</span>
+     }
+
+     <label for="password_one">Password One</label>
+     <input type="text" name="password_one" id="password_one" formControlName="password_one">
+   
+      <label for="password_two">Password</label>
+      <input type="text" name="password_two" id="password_two" formControlName="password_two">
+     @if (validatorsForm.errors?.['passwordDoNotMatch']) {
+        <div>
+            errors
+        </div>
+     }
+</div>
+
+<form class="form-login" [formGroup]="fbForm" (ngSubmit)="onSubmit()">
+    <h2>Forms Builder</h2>
+    <label for="fb_name">Name</label>
+    <input type="text" name="fb_name" id="fb_name" formControlName="fb_name">
+    <br>
+    <h2>FromArray</h2>
+    <div class="a" formArrayName="skills">
+        @for (skill of skills.controls; track skill; let i = $index){
+             <div class="b" [formGroupName]="i">
+                <label [for]="i + 'skill'" >{{i + 1}} | Skill</label>
+                <input [id]="i +'skill'" type="text" formControlName="skill">
+                <label [for]="i +'exp'">Experience</label>
+                <input [id]="i + 'exp'" type="text" formControlName="experience">
+                <button (click)="removeSkill(i)">Delete</button>
+            </div>}
+        <button type="button" (click)="addSkill()">add Skill</button>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<div class="form-login">
+    <h2>Template Driving Form</h2>
+    <label for="templateLogin">Login</label>
+    <input type="text" name="templateLogin" id="templateLogin" [(ngModel)]="templateForm.login" >
+    <label for="templateEmail">Email</label>
+    <input type="text" name="templateEmail" id="templateEmail" [(ngModel)]="templateForm.email">
+    <label for="templatePassword">Password</label>
+    <input type="text" name="templatePassword" id="templatePassword" [(ngModel)]="templateForm.password">
+    <pre>
+        {{templateForm | json}}
+    </pre>
+</div>
+
+<div class="form-login" [formGroup]="customForm">
+    <h2>Custom Control</h2>
+    <app-rate formControlName="rate" [options]="rates" ></app-rate>
+</div>
+

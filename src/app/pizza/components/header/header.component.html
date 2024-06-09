@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="logo">
+        Angular Pizza
+    </div>
+   <nav class="nav">
+    <ul class="menu">
+        <li>{{user.value?.email}}</li>
+        <li class="menu__item">
+            <a 
+                mat-raised-button 
+                color="secondary"
+                routerLink="/cart" 
+                class="menu__item"
+            >
+            Cart
+            </a>
+        </li>
+        <li>
+            @if(isAuth|async){
+                <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+            }
+            @else {
+                <button mat-raised-button color="primary" (click)="openDialog()">Login</button>
+            }
+        </li>
+    </ul>
+   </nav>
+</header>

@@ -1,0 +1,164 @@
+{
+  "pizzas": [
+    {
+      "id": "1",
+      "articul": "s234",
+      "title": "Чизбургер-пицца",
+      "price": 395,
+      "img": "assets/image/01.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 5,
+      "categories": 4
+    },
+    {
+      "id": "2",
+      "articul": "s244",
+      "title": "Сырная",
+      "price": 450,
+      "img": "assets/image/02.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 2,
+      "categories": 1
+    },
+    {
+      "id": "3",
+      "articul": "s334",
+      "title": "Креветки по-азиатски",
+      "price": 290,
+      "img": "assets/image/03.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 1,
+      "categories": 0
+    },
+    {
+      "id": "4",
+      "articul": "s164",
+      "title": "Сырный цыпленок",
+      "price": 385,
+      "img": "assets/image/04.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 3,
+      "categories": 1
+    },
+    {
+      "id": "5",
+      "articul": "s632",
+      "title": "Чизбургер-пицца",
+      "price": 299,
+      "img": "assets/image/01.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 4,
+      "categories": 3
+    },
+    {
+      "id": "6",
+      "articul": "s131",
+      "title": "Сырная",
+      "price": 350,
+      "img": "assets/image/02.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 9,
+      "categories": 2
+    },
+    {
+      "id": "7",
+      "articul": "s092",
+      "title": "Креветки по-азиатски",
+      "price": 579,
+      "img": "assets/image/03.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 6,
+      "categories": 2
+    },
+    {
+      "id": "8",
+      "articul": "s092",
+      "title": "Сырный цыпленок",
+      "price": 579,
+      "img": "assets/image/04.png",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        26,
+        30,
+        40
+      ],
+      "rating": 2,
+      "categories": 2
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "basket": []
+    },
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin1@gmail.com",
+      "password": "123456",
+      "basket": []
+    }
+  ]
+}

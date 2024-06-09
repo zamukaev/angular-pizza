@@ -1,0 +1,15 @@
+.rates-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .rate-item{
+        border: 1px solid black;
+        padding: 5px 10px;
+        border-radius: 25px;
+        margin-right: 5px;
+        transition:all ease-in 0.3s;
+    }
+    .rate-item.active{
+        background: #d82727;
+    }
+}

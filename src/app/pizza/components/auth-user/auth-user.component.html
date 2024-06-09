@@ -1,0 +1,39 @@
+<div class="auth-form">
+    <nav class="nav">
+        <button [ngClass]="{login,active:haveToLogin}" mat-button (click)="haveToLoginHandler()" color="primary">Login</button>
+        <button [ngClass]="{register,active:!haveToLogin}"mat-button color="warn" (click)="haveToRegisterHandler()" >Register</button>
+    </nav>
+    <form class="form" [formGroup]="haveToLogin? authData:registerData" >
+        @if(!haveToLogin){
+            <mat-form-field class="full-width">
+                <input matInput type="text" placeholder="User name" formControlName="username">
+            </mat-form-field>
+        }
+        <mat-form-field class="full-width">
+            <input matInput type="text"  placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input  matInput type="text" placeholder="Password" formControlName="password">
+        </mat-form-field> 
+    @if(haveToLogin){
+        <button  
+            class="btn" 
+            mat-raised-button
+            color="primary"
+            (click)="login()"
+         >
+            Login
+        </button>
+    }
+    @else {
+        <button  
+            class="btn" 
+            mat-raised-button
+            color="warn"
+            (click)="register()"
+         >
+            Register
+        </button>
+    }
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div *ngIf="cart$ | async; else tmp" class="cart">
+    <div>
+        <a mat-stroked-button color="secondary" routerLink="/"> Go back</a>
+    </div>
+    <div class="top">
+        <h2 class="title"><span></span> Корзина</h2>
+        <div class="clearBtn"> <span></span>Очистить корзину</div>
+    </div>
+
+<ul>
+  @for(cartItem of (cart$ | async);track cartItem.id){
+          <app-pizza-cart-item [cartItem]="cartItem" ></app-pizza-cart-item>
+  }
+</ul>
+<div class="infos">
+    <div class="totalPizzes">Всего пицц: <span>  шт.</span></div>
+    <div class="totalCount">Сумма заказа: <span> ₽</span></div>
+</div>
+<div class="buttons">
+  
+</div>
+
+</div>
+
+<ng-template #tmp>
+    <span>Loading...</span>
+</ng-template>

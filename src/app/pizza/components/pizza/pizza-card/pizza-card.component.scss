@@ -1,0 +1,90 @@
+.card{
+     margin: 15px;
+     mat-card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+      .image{
+        align-self: center;
+      }  
+     }
+    .options{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn{
+        margin-left: auto;
+        &:hover{
+            background: #fbc744;
+            color: white;
+        }
+    }
+   
+    .sizes{
+            list-style: none;
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .size{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                letter-spacing: 0.015em;
+                color: #2C2C2C;
+                padding: 5px 20px;
+
+                border-radius: 5px;
+                margin-right: 5px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                &:hover{
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+                    background: #fbc744;
+                    color: white;
+                }
+            }
+            .size.active{
+                background: #fbc744;
+                color: white;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+            }
+        }
+        .types{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            .type{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                letter-spacing: 0.015em;
+                color: #2C2C2C;
+                align-self: center;
+                padding: 5px 25px ;
+            
+                border-radius: 5px;
+                &:last-child{
+                    margin-left: 5px;
+                }
+                &:hover{
+                    background: #fbc744;
+                    color: white;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04); 
+                }
+            }
+            .type.active{
+                background: #fbc744;
+                color: white;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+            }
+        }
+}
+.price{
+    font-weight: 500;
+}

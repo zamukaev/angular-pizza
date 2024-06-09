@@ -1,0 +1,31 @@
+<mat-card class="card">
+    <mat-card-content>
+        <img mat-card-image class="image" [src]="pizza?.img" alt=""/>
+        <mat-card-title class="title">{{pizza?.title}}</mat-card-title>
+        <div class="options">
+            <ul class="types">
+                @for(type of pizza?.type; track type; let idx=$index){
+                <li
+                 [ngClass]="{type, active:selectedType===type}"
+                 (click)="selectPizzaType(idx)"
+                 >{{type}}</li>
+            }
+            </ul>
+            <ul class="sizes">
+                @for (size of pizza?.size; track size; let idx = $index) {
+                    <li 
+                    [ngClass]="{active:selectedSize===size, size}"
+                     (click)="selectPizzaSize(idx)">{{ size}}</li>
+                 } 
+            </ul>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="action">
+            <span  class="price">от {{pizza?.price |currency:'₽'}} </span>
+            <button 
+                mat-stroked-button  
+                class="btn"
+                (click)="onAddToCartHandle(pizza)"
+                >add to cart</button>
+    </mat-card-actions>
+</mat-card>

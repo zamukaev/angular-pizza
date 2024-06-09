@@ -1,0 +1,5 @@
+<section class="pizzas-list">
+ @for(pizza of (pizzas$ | async);track pizza.id){  
+     <app-pizza-card [pizza]="pizza" (onAddToCartEmitter)="onAddToCartHandle($event)">
+    </app-pizza-card>}
+</section>

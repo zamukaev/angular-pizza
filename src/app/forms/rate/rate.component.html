@@ -1,0 +1,17 @@
+<div>
+    @if(options.text!==undefined){
+        <p>{{options.text}}</p>
+    }
+    <div class="rates-wrapper">
+        @for(el of ratesArr; track el;){
+            <div
+                class="rate-item"
+                (click)="onRate(el)"
+                [ngClass]="el <= currentRate? 'active' : '' "
+                >
+                {{el}}
+            </div>
+        }
+    </div>
+    
+</div>
